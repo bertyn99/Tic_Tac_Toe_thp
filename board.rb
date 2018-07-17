@@ -2,11 +2,13 @@ require_relative 'boardCase'
 
 class Board 
     attr_accessor :board
-    def initialize(board=[])
+    def initialize(board=[])#on initialise  le tableau vide
         9.times do
-            board<<BoardCase.new()
+            board<<BoardCase.new() #ajouter dans un array des object BoardCase
         end
-        @board=board.map{|h| h.boardCase}
+        @board=board.map{|h| h.boardCase} #le map recupere array des object BoardCase et leur id bizarre
+                                          #et casse pied et le transform en tableau ne contenant que les valeur des object boardcase
+
 
 
     end
